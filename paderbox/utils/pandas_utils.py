@@ -47,7 +47,7 @@ def py_query(
     >>> df = pd.DataFrame([{'a b': 1, 'b\\nc': 2}, {'a b': 3, 'b\\nc': 4}])
     >>> py_query(df, 'kwargs["a b"] == 1 and kwargs["b\\\\nc"] == 2')
        a b  b\\nc
-    0  1    3
+    0  1    2
 
     When you need a package function, you have to specify it in the globals
     dict. e.g.:
