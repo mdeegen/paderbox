@@ -46,8 +46,8 @@ def py_query(
     contains a whitespace), you have to use the kwargs dictionary:
     >>> df = pd.DataFrame([{'a b': 1, 'b\\nc': 2}, {'a b': 3, 'b\\nc': 4}])
     >>> py_query(df, 'kwargs["a b"] == 1 and kwargs["b\\\\nc"] == 2')
-       a b  b\nc
-    0    1  3
+       a b  b\\nc
+    0  1    3
 
     When you need a package function, you have to specify it in the globals
     dict. e.g.:
