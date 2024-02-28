@@ -102,7 +102,7 @@ def py_query(
         assert use_pd_query is False, use_pd_query
 
     keywords = ['index'] + list(data)
-        
+
     def is_valid_variable_name(name: str):
         import ast
         if len(name.splitlines()) != 1:
