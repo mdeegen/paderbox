@@ -102,9 +102,11 @@ def py_query(
         assert use_pd_query is False, use_pd_query
 
     keywords = ['index'] + list(data)
-
-    def is_valid_variable_name(name):
+        
+    def is_valid_variable_name(name: str):
         import ast
+        if len(name.splitlines()) != 1:
+            return False
         # https://stackoverflow.com/a/36331242/5766934
         try:
             ast.parse('{} = None'.format(name))
