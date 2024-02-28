@@ -44,8 +44,8 @@ def py_query(
 
     To access column names that aren't valid python identifiers (e.g. the name
     contains a whitespace), you have to use the kwargs dictionary:
-    >>> df = pd.DataFrame([{'a b': 1, 'b\nc': 2}, {'a b': 3, 'b\nc': 4}])
-    >>> py_query(df, 'kwargs["a b"] == 1 and kwargs["b\\nc"] == 2')
+    >>> df = pd.DataFrame([{'a b': 1, 'b\\nc': 2}, {'a b': 3, 'b\\nc': 4}])
+    >>> py_query(df, 'kwargs["a b"] == 1 and kwargs["b\\\\nc"] == 2')
        a b  b\nc
     0    1  3
 
